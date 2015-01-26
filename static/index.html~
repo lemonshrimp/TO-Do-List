@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Homepage</title>
+</head>
+<body>
+<h1>Welcome to Arnold Lin's Homepage</h1>
+<!--
+<h2>Test 1</h2>
+<form method="GET" id="f" action=""> <!--processComment.py
+	<p>Name: <input type="text" name="user">
+	<p>Comment: <input type="text" size="50" name="comment">
+	<p>Click here to submit form: <input type="submit" value="Go!">
+</form>
+-->
+<a href = "google.html">Google</a>
+
+
+</body>
