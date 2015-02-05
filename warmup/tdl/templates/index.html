@@ -1,14 +1,20 @@
-<h2>Best To Do List Ever</h2>
-<body>
-   {% for x in items %}
-   <p>{{ x.Title }} - {{ x.Date|date:"D d M Y" }}</p>
-   <p>{{ x.Content }}</p>
-   <hr />
-   {% endfor %}
-</body>
-
-<form method"GET" action="">
-	<p>Add a todo item: <input type="text" name="newtodo"></p>
-	<p>Specific Time: <input type="text" name="duetime"></p>
-	<input type="submit" value="Add to List">
-</form>
+<html>
+	<title>Best to-do List Ever</title>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/../static/index.css">
+	</head>
+	<body>
+		<h1></h1>
+		<h1>Best To-Do List Ever, for free</h1>
+		<img></img>
+		<div class="psw">
+		<form method="GET" action="">
+			<p class="field">
+			Username: <input type="text" name="usr"><br>
+			Password: <input type="password" name="pw"><br>
+			</p>
+			<p><input type="submit" value="Submit"></p>
+		</form>
+		</div>
+	</body>
+</html>
