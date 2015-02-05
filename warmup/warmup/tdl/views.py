@@ -3,10 +3,12 @@ from django.shortcuts import render_to_response
 from django.contrib import auth
 
 def index(request): 
- 
-    items = To_do.objects.all() 
- 
-    return render_to_response('index.html', {'items': items})
+    lists = tdList.objects.all() 
+    tdElems = []
+    for elem in lists:
+     tdElems.append(To_do.objects.filter(inList = elem))
+     
+    return render_to_response('index.html', {'items': lists, 'content': tdElems})
 
 def login(request):
     username = request.POST.get('username', '')
