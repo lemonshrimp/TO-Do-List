@@ -10,9 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = (
-    'C:\warmup\tdl\templates',
-)
+BASE_DIR = os.path.realpath(os.path.dirname('setting.py'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -62,7 +60,7 @@ WSGI_APPLICATION = 'warmup.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'C:\warmup\warmup\database.sqlite3',
+        'NAME': os.path.join(BASE_DIR, '/warmup/database/database.sqlite3',
     }
 }
 
