@@ -10,7 +10,9 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.realpath(os.path.dirname('setting.py'))
+BASE_DIR = (
+    'C:\warmup\tdl\templates',
+)
 
 
 # Quick-start development settings - unsuitable for production
@@ -60,7 +62,7 @@ WSGI_APPLICATION = 'warmup.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, '/warmup/database/database.sqlite3',
+        'NAME': 'C:\warmup\warmup\database.sqlite3',
     }
 }
 
@@ -77,6 +79,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+CACHE_BACKEND = 'memcached://127.0.0.1:8000/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/

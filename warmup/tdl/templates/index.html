@@ -1,14 +1,18 @@
-<h2>Best To Do List Ever</h2>
-<body>
-   {% for x in items %}
-   <p>{{ x.Title }} - {{ x.Date|date:"D d M Y" }}</p>
-   <p>{{ x.Content }}</p>
-   <hr />
-   {% endfor %}
-</body>
+{% block content %}
 
-<form method"GET" action="">
-	<p>Add a todo item: <input type="text" name="newtodo"></p>
-	<p>Specific Time: <input type="text" name="duetime"></p>
-	<input type="submit" value="Add to List">
-</form>
+  {% if form.errors %}
+    <p class="error">Sorry, Your username and password are unmatched. </p>
+  {% endif %}
+
+  <form action="/" method="post">
+  {% csrf_token %}
+    <label for="username">User name:</label>
+    <input type="text" name="username" value="" id="username">
+    <label for="password">Password:</label>
+    <input type="password" name="password" value="" id="password">
+    
+    <input type="submit" value="login" />
+    <input type="hidden" name="next" value="{{ next|escape }}" />
+  </form>
+   <a href="/registration/">Register Here</a>
+{% endblock %}
