@@ -9,9 +9,9 @@ from django.template import RequestContext
 
 def todo(request, provedUser): 
     lists = tdList.objects.filter(user=provedUser)
-    totalList = []
+    #totalList = []
     for lelem in lists:
-     totalList.append(To_do.objects.filter(inList = lelem)
+     lelem.ListElements = To_do.objects.filter(inList = lelem)
     #items = To_do.objects.all() , 
  
     return render('todo.html', {'items': lists, 'finalList': totalList}, context_instance=RequestContext(request))
