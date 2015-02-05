@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css" />
-    <title>{% block title %}My amazing site{% endblock %}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}style.css" />
+    <title>{% block title %}Best To-do List Ever{% endblock %}</title>
 </head>
 
 <body>
+<!--
     <div id="sidebar">
         {% block sidebar %}
         <ul>
@@ -14,7 +15,7 @@
         </ul>
         {% endblock %}
     </div>
-
+-->
     <div id="content">
         {% block content %}{% endblock %}
     </div>
