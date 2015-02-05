@@ -23,6 +23,7 @@ class To_do(models.Model):
 class tdList(models.Model):
   
   Title = models.CharField(max_length=150, unique=True)
+  #User = model.ForeignKey(Users)
   def __str__(self):
       return self.title
       
