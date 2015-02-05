@@ -5,9 +5,12 @@ import datetime
 
 class To_do(models.Model): 
 
-  Title = models.CharField(max_length=150, unique=True)
+  Title = models.CharField(max_length=150)
   Content = models.TextField(max_length=250)
   Date =  models.DateTimeField(default=datetime.datetime.now)
+  isCompleted = models.BooleanField(default=False) 
+  inList = models.ForeignKey(tdList)
+  
   def __str__(self):
       return self.title
 
@@ -17,4 +20,15 @@ class To_do(models.Model):
   class Admin:
     pass
   
+class tdList(models.Model):
+  
+  Title = models.CharField(max_length=150, unique=True)
+  def __str__(self):
+      return self.title
+      
+  class Meta:
+    ordering = ['Title']
+  
+  class Admin:
+    pass
   
