@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'warmup.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, '/warmup/database/database.sqlite3'),
+        'NAME': '/home/ylin87/github/to-do-list/warmup/warmup/database/database.sqlite3',
     }
 }
 

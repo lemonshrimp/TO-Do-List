@@ -10,7 +10,7 @@ class To_do(models.Model):
   Content = models.TextField(max_length=250)
   Date =  models.DateTimeField(default=datetime.datetime.now)
   isCompleted = models.BooleanField(default=False) 
-  inList = models.ForeignKey(tdList)
+  inList = models.ForeignKey('tdList')
   
   def __str__(self):
       return self.title

@@ -47,7 +47,7 @@ def register(request):
         'form': form,
     })
 
-@login_required
+#@login_required
 def delete_td(request,td_id):
 
     td = To_do.objects.get(id=To_do_id)
@@ -55,7 +55,7 @@ def delete_td(request,td_id):
     return HttpResponse("true")
 
 from datetime import datetime
-@login_required
+#@login_required
 def add_td(request):
 
     td_Title = request.GET.get('title')
