@@ -57,7 +57,7 @@ def add_td(request):
 
     td_Title = request.GET.get('title')
     td_Date = datetime.strptime(request.GET.get('Date'),"%m/%d/%Y")
-    td_Content = request.GET.get('Content)
+    td_Content = request.GET.get('Content')
     new_td = td(Title=td_Title,Date=td_Date,Content=td_Content,user=request.user)
     new_td.save()
     return HttpResponse(new_td.id)
