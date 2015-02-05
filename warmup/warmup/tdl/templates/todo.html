@@ -1,0 +1,9 @@
+<h2>Best To Do List Ever</h2>
+<body>
+{% for x in items %}
+<p>{{ x.Title }} - {{ x.Date|date:"D d M Y" }}</p>
+ 
+<p>{{ x.Content }}</p>
+<hr />
+{% endfor %}
+</body>
