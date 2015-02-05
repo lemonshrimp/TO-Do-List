@@ -7,11 +7,14 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.template import RequestContext
 
-def todo(request): 
+def todo(request, provedUser): 
+    lists = tdList.objects.filter(user=provedUser)
+    totalList = []
+    for lelem in lists:
+     totalList.append(To_do.objects.filter(inList = lelem)
+    #items = To_do.objects.all() , 
  
-    items = To_do.objects.all() , 
- 
-    return render('todo.html', {'items': items}, context_instance=RequestContext(request))
+    return render('todo.html', {'items': lists, 'finalList': totalList}, context_instance=RequestContext(request))
 
 def index(request): 
  
