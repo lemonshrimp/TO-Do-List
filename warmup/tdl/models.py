@@ -16,7 +16,7 @@ class To_do(models.Model):
       return self.title
 
   class Meta:
-    ordering = ['Date', 'Title']
+    ordering = ['isCompleted', 'Date', 'Title']
   
   class Admin:
     pass
