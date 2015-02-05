@@ -8,15 +8,14 @@
   <title>Best To-Do List Ever - Log-in</title>
 
   <!-- <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
--->
-  {% load staticfiles % }
 
-  <link rel='stylesheet' href="{% static 'tdl/style.css'}"/>
-  <!--  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+  {% load staticfiles % }
 -->
+  <style type ='text/css' href="{{ STATIC_URL }}tdl/style.css"></style>
+  <link rel="stylesheet" href="{{ STATIC_URL }}tdl/style.css" media="screen" type="text/css" />
 </head>
 
-<body background="{% static 'tdl/bg.jpg'}">
+<body background="{{ STATIC_URL }}tdl/bg.jpg">
 
   <div class="login-card">
     <h1>Log-in</h1><br>
