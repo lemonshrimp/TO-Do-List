@@ -1,14 +1,12 @@
-from models import To_do
+from models import *
 from django.shortcuts import render_to_response
-
+from django.contrib import auth
 
 def index(request): 
  
     items = To_do.objects.all() 
  
     return render_to_response('index.html', {'items': items})
-
-from django.contrib import auth
 
 def login(request):
     username = request.POST.get('username', '')
@@ -22,8 +20,6 @@ def login(request):
     else:
         # Show an error page
         return HttpResponseRedirect("")
-
-from django.contrib import auth
 
 def logout(request):
     auth.logout(request)
