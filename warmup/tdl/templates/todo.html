@@ -1,4 +1,25 @@
-<h2>Best To Do List Ever</h2>
+{% extends "base.html" %}
+
+<h1>Welcome! {{provedUser}}</h1>
+{% block content %}
+{% for element in items %}
+<h2>{{ element.Title }}</h2>
+ <ul>
+  {% for aElem in element.ListElements %}
+  <li>{{ aElem.Title }}: {{ aElem.Content}} @ {{ aElem.Date|date:"D d M Y" }}  
+   {% if aElem.isCompleted %}
+   Finished!
+   {% else %}
+   Pending...
+   {% endif %}
+  </li> 
+  {% endfor %}
+ </ul>
+ 
+{% endfor %}
+
+{% endblock %}
+<!--
 <body>
 {% for x in items %}
 <p>{{ x.Title }} - {{ x.Date|date:"D d M Y" }}</p>
@@ -7,3 +28,4 @@
 <hr />
 {% endfor %}
 </body>
+-->
