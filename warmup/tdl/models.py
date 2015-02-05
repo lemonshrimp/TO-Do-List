@@ -5,7 +5,7 @@ import datetime
 # Create your models here
 
 class To_do(models.Model): 
-  user = models.ForeignKey(User)
+  
   Title = models.CharField(max_length=150, unique=True)
   Content = models.TextField(max_length=250)
   Date =  models.DateTimeField(default=datetime.datetime.now)
@@ -22,9 +22,8 @@ class To_do(models.Model):
     pass
   
 class tdList(models.Model):
-  
+  user = models.ForeignKey(User)
   Title = models.CharField(max_length=150, unique=True)
-  #User = model.ForeignKey(Users)
   def __str__(self):
       return self.title
       
