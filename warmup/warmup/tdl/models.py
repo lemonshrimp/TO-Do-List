@@ -8,7 +8,7 @@ class To_do(models.Model):
   Title = models.CharField(max_length=150, unique=True)
   Content = models.TextField(max_length=250)
   Date =  models.DateTimeField(default=datetime.datetime.now)
-  def _str_(self):
+  def __str__(self):
       return self.title
 
 
