@@ -24,6 +24,7 @@ class To_do(models.Model):
 class tdList(models.Model):
   user = models.ForeignKey(User)
   Title = models.CharField(max_length=150, unique=True)
+  ListElements = []
   def __str__(self):
       return self.title
       
