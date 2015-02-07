@@ -13,7 +13,7 @@
 				<a  href="/todos/" style="position: center;">Let's Go-To-Do</a>
 			{% else %}
 				<p>Hello, Guest </p>
-				<a  href="/todos/" style="position: center;">Login Here</a>
+				<a  href="/todos/" style="position: center;">Let's Go-To-Do</a>
 			{% endif %}
 			
 		</div>

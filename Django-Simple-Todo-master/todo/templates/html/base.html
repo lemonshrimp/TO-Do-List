@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ STATIC_URL }}/tdl/style.css" />
+    <title>{% block title %}Best To-do List Ever{% endblock %}</title>
+</head>
+
+<body background = "{{ STATIC_URL }}/tdl/bg.jpg">
+<!--
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+-->
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

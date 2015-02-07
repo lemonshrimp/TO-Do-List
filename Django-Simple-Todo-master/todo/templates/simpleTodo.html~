@@ -113,11 +113,11 @@
                 </label>
                 <label class="radio inline" for="priority">
                     <input type="radio" name="priority" value="1"/>
-                    <span class="label label-important">Important</span>
+                    <span class="label label-important">!!!</span>
                 </label>          
                 <label class="radio inline" for="priority">
                     <input type="radio" name="priority" value="2"/>
-                    <span class="label label-warning">Warning</span>
+                    <span class="label label-warning">!!</span>
                 </label>          
                 <label class="radio inline" for="priority">
                     <input type="radio" name="priority" value="3"/>
