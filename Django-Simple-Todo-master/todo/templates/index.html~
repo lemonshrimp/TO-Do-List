@@ -13,9 +13,9 @@
 				<a  href="/todos/" style="position: center;">Let's Go-To-Do</a>
 			{% else %}
 				<p>Hello, Guest </p>
-				<a  href="/todos/" style="position: center;">Let's Go-To-Do</a>
+				<a  href="/todos/" style="position: center;">Login Here</a>
 			{% endif %}
-			
+			<img src = "{{ STATIC_URL }}/img/SM.jpg" />
 		</div>
 	</body>
 </html>
