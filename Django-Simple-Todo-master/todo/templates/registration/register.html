@@ -15,7 +15,7 @@
 			{% endif %}
 			<div class="login-card">
 				<h1>Create an account</h1>
-				<form action="{% url 'django.contrib.auth.views.login' %}" method="post">
+				<form action="" method="post">
 					{% csrf_token %}
 					{{ form.as_p }}
 					<!--
@@ -24,8 +24,7 @@
 					<label for="password">Password:</label>
 					<input type="password" name="password" value="" id="password" placeholder="Password">
 					-->
-					<input type="submit" value="Create the account" class="login login-submit"/>
-					<input type="hidden" name="next" value="/" />
+					<input type="submit" value="Create the account"/>
 					
 				</form>
 			</div>
